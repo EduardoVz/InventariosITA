@@ -1,5 +1,5 @@
 <?php
-$areas = $db->prepare('SELECT * FROM areasdetrabajo WHERE borrado = 0');
+$areas = $db->prepare('SELECT * FROM areasdetrabajo WHERE borrado = \'0\'');
 $areas->execute([]);
 
 echo '<table id="myTable">';
@@ -15,6 +15,6 @@ foreach($areas as $area) {
     echo '</tr>';
 }
 
-echo '</tbody>': 
+echo '</tbody>';
 echo '</table>';
 ?>
