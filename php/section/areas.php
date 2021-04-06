@@ -1,26 +1,18 @@
 <?php
-$post = $db->prepare('SELECT * FROM areasdetrabajo');
-$post->execute([]);
-echo '<table id="myTable"> ';
+$areas = $db->prepare('SELECT * FROM areasdetrabajo WHERE borrado = 0');
+$areas->execute([]);
 
- 	echo '
-     <thead>
-       	<tr>
-         <th> ID </th><th> Nombre </th><th> Borrado </th>
-      </tr>
-    </thead>
-    <tbody>';
+echo '<table id="myTable">';
+echo '<thead><tr><th> ID </th><th> Nombre </th></tr></thead>';
+echo '<tbody>';
 
-foreach($post as $posta){
-    echo '
-    <tr>
-    <td align="right">' . htmlentities($posta['id']) . '</td>
-    <td>' . htmlentities($posta['nombre']) . '</td>
-    <td>' . htmlentities($posta['borrado']) . '</td>
- </tr>';
+foreach($areas as $area) {
+    echo '<tr>';
+    echo '<td>' . htmlentities($area['id']) . '</td>';
+    echo '<td>' . htmlentities($area['nombre']) . '</td>';
+    echo '</tr>';
 }
-     
-    echo '</tbody> 
-      </table>';
-    
+
+echo '</tbody>': 
+echo '</table>';
 ?>
