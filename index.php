@@ -1,8 +1,14 @@
 <?php
 include 'php/config.php';
 session_start();
+
+
+$_SESSION['usuario'] = 'usuario';
+
+
+
 echo '<!DOCTYPE html>';
-echo '<html>';
+echo '<html lang="es-MX">';
 echo '<head>';
 echo '<title>Sistema de Inventarios</title>';
 echo '<meta name="viewport" content="width=device-width, user-scalable=no"/>';
@@ -14,6 +20,9 @@ echo '<link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.24/
 echo '<script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>';
 echo '</head>';
 echo '<body>';
+include 'php/aside.php';
+include 'php/header.php';
+include 'php/section.php';
 echo '<script>$(document).ready( function () { $("#myTable").DataTable(); } );</script>';
 echo '</body>';
 echo '</html>';
