@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_URI'] != '/' && $_SERVER['REQUEST_URI'] != '/index.php') {
     echo '<a href="/" id="logo">Sistema de Inventarios</a>';
     echo '<ul>';
     echo '<a href="/inventario/"><li>📝 Inventario</li></a>';
-    echo '<a href="/areasdetrabajo/"><li>🏢 Áreas de trabajo</li></a>';
+    echo '<a href="/areas/"><li>🏢 Áreas de trabajo</li></a>';
     echo '<a href="/resguardantes/"><li>👥 Resguardantes</li></a>';
     echo '</ul>';
     echo '<ul>';
