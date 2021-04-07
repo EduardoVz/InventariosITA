@@ -91,11 +91,71 @@ aside ul #reportes {
     text-align: center;
 }
 
-section {
+#sectionSesion {
     display: inline-block;
     padding: 32px;
     position: fixed;
     top: var(--cabecera-alto);
     left: var(--lateral-ancho);
     right: 0;
+}
+
+#sectionSesion #myTable input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    border: 0;
+    outline: none;
+}
+
+#sectionSesion #myTable input[type="text"]:not([readonly]) {
+    border: 1px solid var(--color-gris);
+    border-radius: 4px;
+}
+
+#sectionSesion #myTable .boton {
+    padding: 8px;
+    color: var(--color-blanco-fuerte);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--color-azul-fuerte);
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+#sectionSesion #myTable .boton:hover {
+    border: 2px solid var(--color-azul);
+    padding: 6px;
+}
+
+#sectionLogin {
+    background-color: var(--color-blanco-fuerte);
+    width: 320px;
+    display: block;
+    margin: 128px auto;
+    padding: 32px;
+    border-radius: 24px;
+}
+
+#sectionLogin h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--color-negro);
+}
+
+#sectionLogin input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid var(--color-gris);
+    margin: 16px 0;
+}
+
+#sectionLogin #login {
+    background-color: var(--color-azul-fuerte);
+    color: var(--color-blanco-fuerte);
+    font-weight: bold;
 }

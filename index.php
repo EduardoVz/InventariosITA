@@ -1,12 +1,6 @@
 <?php
 include 'php/config.php';
 session_start();
-
-
-$_SESSION['usuario'] = 'usuario';
-
-
-
 echo '<!DOCTYPE html>';
 echo '<html lang="es-MX">';
 echo '<head>';

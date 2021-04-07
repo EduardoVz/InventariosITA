@@ -15,7 +15,7 @@ foreach($areas as $area) {
     echo '<td>';
     echo '<span class="boton" id="editar-' . htmlentities($area['id']). '" style="display: inline-block;" onclick="editar(\''. htmlentities($area['id']) .'\')">Editar</span>';
     echo '<a class="boton" id="actualizar-' . htmlentities($area['id']). '" style="display: none" href="/procesar/'.htmlentities($area['id']).'/">Actualizar</a>';
-    echo '<span class="boton" style="display: inline-block;">Borrar</span>';
+    echo '<span class="boton" style="display: inline-block; background-color: red">Borrar</span>';
     echo '</td>';
     echo '</tr>';
     $idUltimo = $area['id'];

@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteBase /
 Options -Indexes
+RewriteRule procesar/ /index.php?accion=procesar
 RewriteRule inventario/ /index.php?accion=inventario
 RewriteRule areas/ /index.php?accion=areas
 RewriteRule resguardantes/ /index.php?accion=resguardantes
@@ -8,4 +9,5 @@ RewriteRule usuarios/ /index.php?accion=usuarios
 RewriteRule historial/ /index.php?accion=historial
 RewriteRule reportes/ /index.php?accion=reportes
 RewriteRule perfil/ /index.php?accion=perfil
+RewriteRule salir/ /index.php?accion=salir
 ErrorDocument 404 /index.php?accion=error
