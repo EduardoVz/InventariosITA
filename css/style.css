@@ -24,6 +24,7 @@ a {
 }
 
 header {
+    z-index: 99999;
     background-color: var(--color-blanco-fuerte);
     font-weight: bold;
     position: fixed;
@@ -52,6 +53,9 @@ aside {
     height: calc(100vh - var(--cabecera-alto));
     background-color: var(--color-azul);
     font-weight: bold;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
 aside #logo {
@@ -92,11 +96,10 @@ aside ul #reportes {
 }
 
 #sectionSesion {
-    display: inline-block;
+    display: block;
     padding: 32px;
-    position: fixed;
-    top: var(--cabecera-alto);
-    left: var(--lateral-ancho);
+    margin-top: var(--cabecera-alto);
+    margin-left: var(--lateral-ancho);
     right: 0;
 }
 
