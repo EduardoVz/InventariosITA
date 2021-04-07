@@ -132,6 +132,10 @@ aside ul #reportes {
     padding: 6px;
 }
 
+#sectionSesion #myTable form {
+    display: inline-block;
+}
+
 #sectionLogin {
     background-color: var(--color-blanco-fuerte);
     width: 320px;
