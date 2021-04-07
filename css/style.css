@@ -48,6 +48,7 @@ header nav ul li {
 }
 
 aside {
+    z-index: 99999;
     width: var(--lateral-ancho);
     display: inline-block;
     height: calc(100vh - var(--cabecera-alto));
@@ -123,6 +124,7 @@ aside ul #reportes {
     background-color: var(--color-azul-fuerte);
     border-radius: 4px;
     margin: 0 4px;
+    border: 0;
 }
 
 #sectionSesion #myTable .boton:hover {

@@ -10,12 +10,20 @@ $idUltimo;
 
 foreach($areas as $area) {
     echo '<tr>';
-    echo '<td>' . htmlentities($area['id']) . '</td>';
-    echo '<td> <input id="' . htmlentities($area['id']) . '" type="text" readonly value="' . htmlentities($area['nombre']) . '"/></td>';
+    echo '<form method="post" action="/procesar/">';
+    echo '<input type="text" style="display:none" name="procesar" value="actualizar"/>';
+    echo '<td> <input type="text" readonly name="id" value="' . htmlentities($area['id']) . '"/></td>';
+    echo '<td> <input name="nombre" id="' . htmlentities($area['id']) . '" type="text" readonly value="' . htmlentities($area['nombre']) . '"/></td>';
     echo '<td>';
     echo '<span class="boton" id="editar-' . htmlentities($area['id']). '" style="display: inline-block;" onclick="editar(\''. htmlentities($area['id']) .'\')">Editar</span>';
     echo '<a class="boton" id="actualizar-' . htmlentities($area['id']). '" style="display: none" href="/procesar/'.htmlentities($area['id']).'/">Actualizar</a>';
-    echo '<span class="boton" style="display: inline-block; background-color: red">Borrar</span>';
+    echo '</form>';
+    echo '<form method="post" action="/procesar/">';
+    echo '<input type="text" style="display:none" name="procesar" value="borrar"/>';
+    echo '<input type="text" style="display:none" name="id" value="' . htmlentities($area['id']) .'"/>';
+    echo '<input type="text" style="display:none" name="tabla" value="areasdetrabajo"/>';
+    echo '<input type="submit" class="boton" style="display: inline-block; background-color: red" value="Borrar"/>';
+    echo '</form>';
     echo '</td>';
     echo '</tr>';
     $idUltimo = $area['id'];

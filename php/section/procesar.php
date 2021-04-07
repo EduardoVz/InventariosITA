@@ -12,5 +12,9 @@ if ($_POST['procesar'] == 'login') {
     } else {
         header('Location: /');
     }
+} else if ($_POST['procesar'] == 'borrar') {
+    $result = $db->prepare('UPDATE '.$_POST['tabla'].' SET borrado=\'1\' WHERE id=\''.$_POST['id'].'\'');
+    $result->execute([]);
+    header('Location: /areas/');
 }
 ?>
