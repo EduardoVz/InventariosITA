@@ -164,9 +164,14 @@ aside ul #reportes {
     padding: 6px;
 }
 
+<<<<<<< HEAD
 #sectionSesion table form {
     display: inline-block;
     vertical-align: top;
+=======
+#sectionSesion #myTable form {
+    display: inline-block;
+>>>>>>> be4b5128a537d9bd1178fe3e46f0bc31faf45cdd
 }
 
 #sectionLogin {
