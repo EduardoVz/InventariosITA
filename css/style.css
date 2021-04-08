@@ -23,14 +23,21 @@ a {
     text-decoration: none;
 }
 
+#wrapper {
+    display: inline-block;
+    width: calc(100% - var(--lateral-ancho) - 10px);
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
 header {
-    z-index: 99999;
+    z-index: 2;
     background-color: var(--color-blanco-fuerte);
     font-weight: bold;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: calc(100% - var(--lateral-ancho));
+    display: block;
+    width: 100%;
+    box-shadow: 0 3px 10px var(--color-gris);
 }
 
 header nav ul li:hover {
@@ -48,15 +55,13 @@ header nav ul li {
 }
 
 aside {
-    z-index: 99999;
+    z-index: 4;
     width: var(--lateral-ancho);
     display: inline-block;
     height: calc(100vh - var(--cabecera-alto));
     background-color: var(--color-azul);
     font-weight: bold;
-    position: fixed;
-    left: 0;
-    top: 0;
+    height: 100vh;
 }
 
 aside #logo {
@@ -98,25 +103,47 @@ aside ul #reportes {
 
 #sectionSesion {
     display: block;
-    padding: 32px;
+    padding: 24px;
     margin-top: var(--cabecera-alto);
-    margin-left: var(--lateral-ancho);
     right: 0;
 }
 
-#sectionSesion #myTable input[type="text"] {
+#sectionSesion table {
+    width: 100%;
+    box-shadow: 0 0 25px var(--color-gris);
+}
+
+#sectionSesion table thead th {
+    background-color: var(--color-azul);
+    color: var(--color-blanco-fuerte);
+    padding: 12px;
+}
+
+#sectionSesion table tbody tr {
+    background-color: var(--color-blanco-fuerte);
+}
+
+#sectionSesion table tbody td {
+    padding: 4px;
+}
+
+#sectionSesion table input {
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+#sectionSesion table input[type="text"] {
     padding: 8px;
     width: 100%;
     border: 0;
     outline: none;
 }
 
-#sectionSesion #myTable input[type="text"]:not([readonly]) {
-    border: 1px solid var(--color-gris);
-    border-radius: 4px;
+#sectionSesion table input[type="text"]:not([readonly]) {
+    border: 1px solid var(--color-negro);
 }
 
-#sectionSesion #myTable .boton {
+#sectionSesion table .boton {
     padding: 8px;
     color: var(--color-blanco-fuerte);
     font-weight: bold;
@@ -125,11 +152,21 @@ aside ul #reportes {
     border-radius: 4px;
     margin: 0 4px;
     border: 0;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
-#sectionSesion #myTable .boton:hover {
+#sectionSesion table .boton:hover {
     border: 2px solid var(--color-azul);
     padding: 6px;
+}
+
+#sectionSesion table form {
+    display: inline-block;
+    vertical-align: top;
 }
 
 #sectionLogin {
@@ -163,4 +200,31 @@ aside ul #reportes {
     background-color: var(--color-azul-fuerte);
     color: var(--color-blanco-fuerte);
     font-weight: bold;
+}
+
+.centrado {
+    text-align: center;
+}
+
+#asideFuera {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    header {
+        width: 100%;
+    }
+    #sectionSesion {
+        margin-left: 0;
+    }
+    #asideFuera {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        background-color: rgba(0,0,0,0.45);
+    }
 }

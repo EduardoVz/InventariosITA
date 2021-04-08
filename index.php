@@ -9,15 +9,28 @@ echo '<meta name="viewport" content="width=device-width, user-scalable=no"/>';
 echo '<meta charset="utf-8"/>';
 echo '<link rel="icon" type="image/png" href="/img/favicon.png"/>';
 echo '<link type="text/css" rel="stylesheet" href="/css/style.css"/>';
-echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>';
-echo '<link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"/>';
-echo '<script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>';
 echo '</head>';
 echo '<body>';
 include 'php/aside.php';
+echo '<div id="wrapper">';
 include 'php/header.php';
 include 'php/section.php';
-echo '<script>$(document).ready( function () { $("#myTable").DataTable(); } );</script>';
+echo '</div>';
 echo '</body>';
 echo '</html>';
 ?>
+<script>
+    function menu() {
+        if (document.getElementById("aside").style.display == "none") {
+            document.getElementById("aside").style.display = "block",
+            document.getElementById("asideFuera").style.display = "block";
+            document.getElementById("header").style.width = "calc(100% - var(--lateral-ancho)",
+            document.getElementById("section").style.width = "100%";
+        } else if (document.getElementById("aside").style.display == "block") {
+            document.getElementById("aside").style.display = "none",
+            document.getElementById("asideFuera").style.display = "none";
+            document.getElementById("header").style.width = "100%",
+            document.getElementById("section").style.width = "100%";
+        }
+    }
+</script>

@@ -2,7 +2,7 @@
 $usuarios = $db->prepare('SELECT * FROM usuarios WHERE borrado = \'0\'');
 $usuarios->execute([]);
 
-echo '<table id="myTable">';
+echo '<table>';
 echo '<thead><tr><th> ID </th><th> Nombre </th><th></th></tr></thead>';
 echo '<tbody>';
 

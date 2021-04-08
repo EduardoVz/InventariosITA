@@ -2,7 +2,7 @@
 $resguardantes = $db->prepare('SELECT * FROM resguardantes WHERE borrado = \'0\'');
 $resguardantes->execute([]);
 
-echo '<table id="myTable">';
+echo '<table>';
 echo '<thead><tr><th> ID </th><th> Nombre </th><th></th></tr></thead>';
 echo '<tbody>';
 

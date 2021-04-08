@@ -2,7 +2,7 @@
 $inventarios = $db->prepare('SELECT * FROM inventario WHERE borrado = \'0\' LIMIT 1000');
 $inventarios->execute([]);
 
-echo '<table id="myTable">';
+echo '<table>';
 echo '<thead><tr><th> No. SEP </th><th> No. Inventario </th><th> Area de Trabajo</th><th> Resguardante </th><th> Descripción </th><th> Marca </th><th> Modelo </th><th> Serie </th><th> Valor </th><th> Fecha </th><th></th></tr></thead>';
 echo '<tbody>';
 
