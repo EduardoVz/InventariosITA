@@ -15,6 +15,14 @@ if ($_POST['procesar'] == 'login') {
 } else if ($_POST['procesar'] == 'borrar') {
     $result = $db->prepare('UPDATE '.$_POST['tabla'].' SET borrado=\'1\' WHERE id=\''.$_POST['id'].'\'');
     $result->execute([]);
-    header('Location: /areas/');
+    $result = $db->prepare('INSERT INTO `historial`(`descripcion`) VALUES ("Se elimino '.$_POST['nombre'].', de la tabla. '.$_POST['tabla'].' por '.$_SESSION['usuario'].'")');
+    $result->execute([]);
+    header('Location: /'.$_POST['tabla'].'/');
+} else if ($_POST['procesar'] == 'actualizar') {
+    $result = $db->prepare('UPDATE '.$_POST['tabla'].' SET nombre="'.$_POST['nombre'].'" WHERE id=\''.$_POST['id'].'\'');
+    $result->execute([]);
+    $result = $db->prepare('INSERT INTO `historial`(`descripcion`) VALUES ("Se modifico '.$_POST['nombre'].', de la tabla '.$_POST['tabla'].' por '.$_SESSION['usuario'].'")');
+    $result->execute([]);
+    header('Location: /'.$_POST['tabla'].'/');
 }
 ?>

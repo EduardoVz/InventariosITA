@@ -1,5 +1,6 @@
+
 <?php
-$areas = $db->prepare('SELECT * FROM areasdetrabajo WHERE borrado = \'0\'');
+$areas = $db->prepare('SELECT * FROM areas WHERE borrado = \'0\'');
 $areas->execute([]);
 
 echo '<table>';
@@ -15,14 +16,16 @@ foreach($areas as $area) {
     echo '<input type="text" style="display:none" name="procesar" value="actualizar"/>';
     echo '<td> <input type="text" readonly name="id" value="' . htmlentities($area['id']) . '"/></td>';
     echo '<td> <input name="nombre" id="' . $contador . '" type="text" readonly value="' . htmlentities($area['nombre']) . '"/></td>';
+    echo '<input type="text" style="display:none" name="tabla" value="areas"/>';
     echo '<td class="centrado">';
     echo '<span class="boton" id="editar-' . $contador. '" style="display: inline-block;" onclick="editar(\''. $contador .'\')">🖊</span>';
-    echo '<a class="boton" id="actualizar-' . $contador. '" style="display: none; background-color: green" href="/procesar/'.htmlentities($area['id']).'/">✔</a>';
+    echo '<input type="submit" class="boton" id="actualizar-' . $contador. '" style="display: none; background-color: green" value="✔"/>';
     echo '</form>';
     echo '<form method="post" action="/procesar/">';
     echo '<input type="text" style="display:none" name="procesar" value="borrar"/>';
     echo '<input type="text" style="display:none" name="id" value="' . htmlentities($area['id']) .'"/>';
-    echo '<input type="text" style="display:none" name="tabla" value="areasdetrabajo"/>';
+    echo '<input type="text" style="display:none" name="nombre" value="' . htmlentities($area['nombre']) .'"/>';
+    echo '<input type="text" style="display:none" name="tabla" value="areas"/>';
     echo '<input type="submit" class="boton" style="display: inline-block; background-color: red" value="✖"/>';
     echo '</form>';
     echo '</td>';
