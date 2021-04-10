@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_URI'] != '/' && $_SERVER['REQUEST_URI'] != '/index.php') {
     echo '<div id="asideFuera" onclick="menu()"></div>';
-    echo '<aside id="aside" style="display:block">';
+    echo '<aside id="aside" style="display:inline-block">';
     echo '<a href="/" id="logo">Sistema de Inventarios</a>';
     echo '<ul>';
     echo '<a href="/inventario/"><li>📝 Inventario</li></a>';

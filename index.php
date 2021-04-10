@@ -12,7 +12,7 @@ echo '<link type="text/css" rel="stylesheet" href="/css/style.css"/>';
 echo '</head>';
 echo '<body>';
 include 'php/aside.php';
-echo '<div id="wrapper">';
+echo '<div id="wrapper" style="width: calc(100% - 240px)">';
 include 'php/header.php';
 include 'php/section.php';
 echo '</div>';
@@ -22,15 +22,15 @@ echo '</html>';
 <script>
     function menu() {
         if (document.getElementById("aside").style.display == "none") {
-            document.getElementById("aside").style.display = "block",
-            document.getElementById("asideFuera").style.display = "block";
-            document.getElementById("header").style.width = "calc(100% - var(--lateral-ancho)",
-            document.getElementById("section").style.width = "100%";
-        } else if (document.getElementById("aside").style.display == "block") {
+            document.getElementById("aside").style.display = "inline-block",
+            document.getElementById("asideFuera").style.display = "inline-block",
+            document.getElementById("wrapper").style.width = "calc(100% - 240px)",
+            document.getElementById("header").style.width = "calc(100% - 240px)";
+        } else if (document.getElementById("aside").style.display == "inline-block") {
             document.getElementById("aside").style.display = "none",
-            document.getElementById("asideFuera").style.display = "none";
-            document.getElementById("header").style.width = "100%",
-            document.getElementById("section").style.width = "100%";
+            document.getElementById("asideFuera").style.display = "none",
+            document.getElementById("wrapper").style.width = "100%",
+            document.getElementById("header").style.width = "100%";
         }
     }
 </script>

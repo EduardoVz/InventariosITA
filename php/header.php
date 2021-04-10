@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_URI'] != '/') {
-    echo '<header>';
+    echo '<header id="header" style="width: calc(100% - 240px)">';
     echo '<nav>';
     echo '<ul>';
     echo '<span href="#" onclick="menu()"><li style="float: left; cursor:pointer"><span style="font-size: 80%">☰ </span>&nbsp;';
