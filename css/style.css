@@ -117,7 +117,7 @@ section {
 }
 
 section table {
-    width: 100%;
+    width: max-content;
     box-shadow: 0 0 25px var(--color-gris);
 }
 
@@ -140,7 +140,7 @@ section table input {
     box-sizing: border-box;
 }
 
-section table input[type="text"] {
+section table input[type="text"], section table select {
     padding: 8px;
     width: 100%;
     border: 0;
