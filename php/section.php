@@ -1,7 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_URI'] == '/') echo '<section id="sectionLogin">';
-else echo '<section id="sectionSesion">';
-
+echo '<section>';
 if ($_SERVER['REQUEST_URI'] == '/' && isset($_SESSION['id'])) header('Location: /inventario/');
 else if (isset($_SESSION['id'])) {
     if ($_GET['accion'] == 'inventario') include 'php/section/inventario.php';

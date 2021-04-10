@@ -33,6 +33,10 @@ a {
     z-index: 1;
 }
 
+#wrapperLogin {
+    width: 100% !important;
+}
+
 header {
     background-color: var(--color-blanco-fuerte);
     font-weight: bold;
@@ -105,49 +109,49 @@ aside ul #reportes {
     text-align: center;
 }
 
-#sectionSesion {
+section {
     display: block;
     padding: 24px;
     right: 0;
     margin-top: var(--cabecera-alto);
 }
 
-#sectionSesion table {
+section table {
     width: 100%;
     box-shadow: 0 0 25px var(--color-gris);
 }
 
-#sectionSesion table thead th {
+section table thead th {
     background-color: var(--color-azul);
     color: var(--color-blanco-fuerte);
     padding: 12px;
 }
 
-#sectionSesion table tbody tr {
+section table tbody tr {
     background-color: var(--color-blanco-fuerte);
 }
 
-#sectionSesion table tbody td {
+section table tbody td {
     padding: 4px;
 }
 
-#sectionSesion table input {
+section table input {
     background-color: transparent;
     box-sizing: border-box;
 }
 
-#sectionSesion table input[type="text"] {
+section table input[type="text"] {
     padding: 8px;
     width: 100%;
     border: 0;
     outline: none;
 }
 
-#sectionSesion table input[type="text"]:not([readonly]) {
+section table input[type="text"]:not([readonly]) {
     border: 1px solid var(--color-negro);
 }
 
-#sectionSesion table .boton {
+section table .boton {
     padding: 8px;
     color: var(--color-blanco-fuerte);
     font-weight: bold;
@@ -163,17 +167,17 @@ aside ul #reportes {
     box-sizing: border-box;
 }
 
-#sectionSesion table .boton:hover {
+section table .boton:hover {
     border: 2px solid var(--color-azul);
     padding: 6px;
 }
 
-#sectionSesion table form {
+section table form {
     display: inline-block;
     vertical-align: top;
 }
 
-#sectionLogin {
+#wrapperLogin section {
     background-color: var(--color-blanco-fuerte);
     width: 320px;
     display: block;
@@ -182,14 +186,14 @@ aside ul #reportes {
     border-radius: 24px;
 }
 
-#sectionLogin h1 {
+#wrapperLogin section h1 {
     display: block;
     text-align: center;
     margin-bottom: 32px;
     color: var(--color-negro);
 }
 
-#sectionLogin input {
+#wrapperLogin section input {
     display: block;
     width: 100%;
     padding: 12px;
@@ -200,7 +204,7 @@ aside ul #reportes {
     margin: 16px 0;
 }
 
-#sectionLogin #login {
+#wrapperLogin section #login {
     background-color: var(--color-azul-fuerte);
     color: var(--color-blanco-fuerte);
     font-weight: bold;
@@ -237,5 +241,10 @@ aside ul #reportes {
     #wrapper {
         display: block !important;
         width: 100% !important;
+    }
+
+    #wrapperLogin section {
+        width: 100% !important;
+        box-sizing: border-box;
     }
 }
