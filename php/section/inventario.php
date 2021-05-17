@@ -30,7 +30,7 @@ foreach($inventario as $inv) {
     echo '</td>';
     
     
-    $resguardantes = $db->prepare('SELECT * FROM resguardantes WHERE borrado = \'0\'');
+    $resguardantes = $db->prepare('SELECT * FROM resguardantes WHERE borrado = \'0\' and id_area = '. htmlentities($inv['id_area']) .' or id_area = \'0\'');
     $resguardantes->execute([]);
 
     echo '<td>';
@@ -81,14 +81,14 @@ echo 'document.getElementById("fecha-"+i).readOnly = true;';
 echo 'document.getElementById("editar-"+i).style.display =  "inline-block";';
 echo 'document.getElementById("actualizar-"+i).style.display = "none";';
 echo '} ';
-echo 'document.getElementById("nosep-"+id).readOnly = false;';
-echo 'document.getElementById("noinventario-"+id).readOnly = false;';
-echo 'document.getElementById("descripcion-"+id).readOnly = false;';
-echo 'document.getElementById("marca-"+id).readOnly = false;';
-echo 'document.getElementById("modelo-"+id).readOnly = false;';
-echo 'document.getElementById("serie-"+id).readOnly = false;';
-echo 'document.getElementById("valor-"+id).readOnly = false;';
-echo 'document.getElementById("fecha-"+id).readOnly = false;';
+echo 'document.getElementById("nosep-"+id).readOnly = true;';
+echo 'document.getElementById("noinventario-"+id).readOnly = true;';
+echo 'document.getElementById("descripcion-"+id).readOnly = true;';
+echo 'document.getElementById("marca-"+id).readOnly = true;';
+echo 'document.getElementById("modelo-"+id).readOnly = true;';
+echo 'document.getElementById("serie-"+id).readOnly = true;';
+echo 'document.getElementById("valor-"+id).readOnly = true;';
+echo 'document.getElementById("fecha-"+id).readOnly = true;';
 echo 'document.getElementById("editar-"+id).style.display = "none";';
 echo 'document.getElementById("actualizar-"+id).style.display = "inline-block";';
 echo '}';
